@@ -1,5 +1,5 @@
 const net = require("net");
-const client = require('./client')
+const client = require("./client");
 
 // establishes a connection with the game server
 const connect = function () {
@@ -14,10 +14,13 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log(data);
   });
+  // establishing the 'connect' event
+  conn.on("connect", () => {
+    console.log("Successfully connected to a game server");
+    conn.write("Name: MOE");
+  });
 
   return conn;
 };
 
-
-
-module.exports = {connect}
+module.exports = { connect };
