@@ -15,13 +15,13 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
-  if (key === "\u0087") {
-    cgtonnection.write("Move: up");
+  if (key === "\u0077") {
+    connection.write("Move: up");
  }
   if (key === "\u0073") {
     connection.write("Move: down");
  }
-  if (key === "\u0071") {
+  if (key === "\u0061") {
     connection.write("Move: left");
  }
   if (key === "\u0064") {
